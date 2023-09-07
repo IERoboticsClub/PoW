@@ -4,7 +4,7 @@
 
 ## PoW Series
 
-The IE Robotics Club organizes the AI Paper of the Week, a **discussion on a trending topic related to Robotics or AI**. During the event, we will be reviewing and analyzing a paper on one of these topics and **discussing the most intriguing aspects** of it in depth. Any doubts that may arise during the reading will be addressed.
+The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on a trending topic related to Robotics or AI**. During the event, we will be reviewing and analyzing a paper on one of these topics and **discussing the most intriguing aspects** of it in depth. Any doubts that may arise during the reading will be addressed.
 
 📅 The paper to be discussed will be **chosen one week in advance** by all attendees of the upcoming event and will be published for **individual reading beforehand**.
 
@@ -26,14 +26,14 @@ The IE Robotics Club organizes the AI Paper of the Week, a **discussion on a tre
 #### 1. Create a virtual environment and activate it
 
 ```bash
-make install TOPIC=gans
+make install TOPIC=<pow_topic_folder>
 ```
 
 
 #### 2. Activate the virtual environment
 
 ```bash
-cd <topic>
+cd <pow_topic_folder>
 source .venv/bin/activate
 ```
 
