@@ -26,14 +26,14 @@ The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on 
 #### 1. Create a virtual environment and activate it
 
 ```bash
-make install TOPIC=gans
+make install TOPIC=<pow_topic_folder>
 ```
 
 
 #### 2. Activate the virtual environment
 
 ```bash
-cd <topic>
+cd <pow_topic_folder>
 source .venv/bin/activate
 ```
 
