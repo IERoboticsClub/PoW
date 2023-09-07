@@ -18,7 +18,7 @@ The IE Robotics Club organizes the AI Paper of the Week, a **discussion on a tre
  
 | Topic | Paper | Code | Visuals |
 | :---: | :---: | :---: | :---: |
-| GANS  | Generative Adversial Networks | [Code](./gans/) | <img src="./gans/evolution.gif" width="100" height="100"> |
+| GANS  | Generative Adversial Networks | [Code](./gans/) | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100"> |
 
 
 ## How to make this code run
