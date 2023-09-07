@@ -4,7 +4,7 @@
 
 ## PoW Series
 
-The IE Robotics Club organizes the AI Paper of the Week, a **discussion on a trending topic related to Robotics or AI**. During the event, we will be reviewing and analyzing a paper on one of these topics and **discussing the most intriguing aspects** of it in depth. Any doubts that may arise during the reading will be addressed.
+The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on a trending topic related to Robotics or AI**. During the event, we will be reviewing and analyzing a paper on one of these topics and **discussing the most intriguing aspects** of it in depth. Any doubts that may arise during the reading will be addressed.
 
 📅 The paper to be discussed will be **chosen one week in advance** by all attendees of the upcoming event and will be published for **individual reading beforehand**.
 
