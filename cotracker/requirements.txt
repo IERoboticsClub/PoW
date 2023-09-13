@@ -6,7 +6,6 @@ opencv-python
 matplotlib
 moviepy
 flow_vis
-cv2
 numpy
 matplotlib
 moviepy
