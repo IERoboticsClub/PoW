@@ -27,9 +27,40 @@ B --> C[Updated Tracks]
 This is done in a loop $M$ times:
 
 ```mermaid
-graph LR
-A[Tracks] --> B[Transformer]
-B --> C[Updated Tracks]
-C --> D[Tracks]
-D --> B
+graph TD
+    A[Initial Tracks] --> B[Load into 2D Grid]
+    B --> C[Transformer Network]
+    C --> D[Apply Specialized Attention]
+    D --> E[Iterative Refinement]
+    E -. "Update Grid M times" .-> B
+    E --> F[Final Tracks]
+    F --> G[Output: Estimated Tracks]
+    F --> H[Output: Visibility Flags]
 ```
+
+
+### Legend for CoTracker Architecture Diagram (chart above)
+
+- **Initial Tracks**: \( (P_{ti}, t_i)^{N}_{i=1} \)
+  The starting locations and times of \( N \) tracks.
+
+- **Load into 2D Grid**: \( G_{it} \)
+  The grid of input tokens, one for each track \( i = 1, ..., N \), and time \( t = 1, ..., T \).
+
+- **Transformer Network**: \( \Psi: G \rightarrow O \)
+  The transformer network that processes the 2D grid \( G \) to improve a given estimate of the tracks.
+
+- **Apply Specialized Attention**: Self-Attention in \( \Psi \)
+  The specialized attention layers within the transformer that focus on important aspects of the motion.
+
+- **Iterative Refinement**: \( O_{ti} \)
+  The updated tracks are expressed by a corresponding grid of output tokens \( O_{ti} \).
+
+- **Final Tracks**: \( \hat{P}_{t} = ( \hat{x}_{t}, \hat{y}_{t} ) \)
+  The final estimated positions of the points being tracked.
+
+- **Output: Estimated Tracks**: \( \hat{P}_{t} \)
+  The final estimated positions of the points being tracked.
+
+- **Output: Visibility Flags**: \( \hat{v}_{ti} \)
+  The estimated visibility flags indicating whether each point is visible or occluded in each frame.
