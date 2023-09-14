@@ -1,6 +1,6 @@
 # CoTracker
 
-A new state of the art architecture for optical flow and particle tracking proposed by meta. The key innovation in this project is the use of Transformer Architecture [^1] and the idea that tracking multiple particles concurrently, can help boos overall accuracy.
+A new state of the art architecture for optical flow and particle tracking proposed by meta. The key innovation in this project is the use of Transformer Architecture and the idea that tracking multiple particles concurrently, can help boos overall accuracy.
 
 https://github.com/velocitatem/PoW/assets/60182044/527a3377-4f59-435f-a0e1-b8b65a838b08
 
@@ -24,7 +24,7 @@ A[Tracks] --> B[Transformer]
 B --> C[Updated Tracks]
 ```
 
-This is done in a loop$M$times:
+This is done in a loop $M$ times:
 
 ```mermaid
 graph TD
@@ -42,25 +42,25 @@ graph TD
 ### Legend for CoTracker Architecture Diagram (chart above)
 
 - **Initial Tracks**: $(P_{ti}, t_i)^{N}_{i=1}$
-  The starting locations and times of$N$tracks.
+  The starting locations and times of $N$ tracks.
 
 - **Load into 2D Grid**: $G_{it}$
-  The grid of input tokens, one for each track$i = 1, ..., N$, and time$t = 1, ..., T$.
+  The grid of input tokens, one for each track $i = 1, ..., N$, and time $t = 1, ..., T$.
 
 - **Transformer Network**: $\Psi: G \rightarrow O$
-  The transformer network that processes the 2D grid$G$to improve a given estimate of the tracks.
+  The transformer network that processes the 2D grid $G$ to improve a given estimate of the tracks.
 
-- **Apply Specialized Attention**: Self-Attention in$\Psi$
+- **Apply Specialized Attention**: Self-Attention in $\Psi$
   The specialized attention layers within the transformer that focus on important aspects of the motion.
 
 - **Iterative Refinement**: $O_{ti}$
-  The updated tracks are expressed by a corresponding grid of output tokens$O_{ti}$.
+  The updated tracks are expressed by a corresponding grid of output tokens $O_{ti}$.
 
-- **Final Tracks**: $\hat{P}_{t} = ( \hat{x}_{t}, \hat{y}_{t} )$
+- **Final Tracks**: 
   The final estimated positions of the points being tracked.
 
 - **Output: Estimated Tracks**: $\hat{P}_{t}$
   The final estimated positions of the points being tracked.
 
 - **Output: Visibility Flags**: $\hat{v}_{ti}$
-  The estimated visibility flags indicating whether each point is visible or occluded in each frame.
+  The estimated visibility flags indicate whether each point is visible or occluded in each frame.
