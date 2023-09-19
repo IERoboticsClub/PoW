@@ -59,7 +59,7 @@ graph TD
   The estimated visibility flags indicate whether each point is visible or occluded in each frame.
 
 
-The technical backbone of CoTracker is a (transformer network)[https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/], a type of neural network that's particularly good at handling sequences and relationships within them. The transformer iteratively refines its estimates of where points are in each frame, effectively learning from the video as it goes along. What's even cooler is that this isn't just for short clips; CoTracker is designed to handle long videos by using a sliding-window approach. This means it can update its tracking in real-time as it processes the video, making it incredibly flexible and scalable.
+The technical backbone of CoTracker is a [transformer network](https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/), a type of neural network that's particularly good at handling sequences and relationships within them. The transformer iteratively refines its estimates of where points are in each frame, effectively learning from the video as it goes along. What's even cooler is that this isn't just for short clips; CoTracker is designed to handle long videos by using a sliding-window approach. This means it can update its tracking in real-time as it processes the video, making it incredibly flexible and scalable.
 
 ## Combination with Viper
 
@@ -68,3 +68,7 @@ CoTracker could serve as one of the modules in ViperGPT's API. For example, a qu
 > track the movement of the dog and the ball in the video and tell me if the dog catches the ball.
 
 > Track the movement of all individuals in the surveillance video and alert if someone enters a restricted area.
+
+
+Additional Resources:
++ https://encord.com/blog/cotracker-metai/
