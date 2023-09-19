@@ -1,3 +1,8 @@
+---
+Paper: https://arxiv.org/pdf/2307.07635.pdf
+Official Website: https://co-tracker.github.io/
+Demo: https://huggingface.co/spaces/facebook/cotracker
+---
 # CoTracker
 
 A new state of the art architecture for optical flow and particle tracking proposed by meta. The key innovation in this project is the use of Transformer Architecture and the idea that tracking multiple particles concurrently, can help boos overall accuracy.
@@ -16,16 +21,7 @@ Both methods have their limitations. For example, they struggle with tracking po
 
 ## High Level Overview
 
-We first need to understand the inputs that go into the model. We have a video and a set of tracks for each particle. The tracks are initialized as null. The model then takes these tracks and updates them to better fit the ground truth. Lets look at the variables to better understand the problem:
-
-
-```mermaid
-graph LR
-A[Tracks] --> B[Transformer]
-B --> C[Updated Tracks]
-```
-
-This is done in a loop $M$ times:
+CoTracker is built on the idea that points in a video are often correlated. For example, if you're tracking the wheels of a car, it's likely that if one wheel moves, the other will too. The authors argue that by ignoring these correlations, we're missing out on improving the accuracy of tracking. So, they propose a new architecture that tracks multiple points jointly throughout an entire video sequence. This is a game-changer because it allows the model to share information between points, enhancing the tracking performance.
 
 ```mermaid
 graph TD
@@ -65,3 +61,6 @@ graph TD
 
 - **Output: Visibility Flags**: $\hat{v}_{ti}$
   The estimated visibility flags indicate whether each point is visible or occluded in each frame.
+
+
+The technical backbone of CoTracker is a transformer network, a type of neural network that's particularly good at handling sequences and relationships within them. The transformer iteratively refines its estimates of where points are in each frame, effectively learning from the video as it goes along. What's even cooler is that this isn't just for short clips; CoTracker is designed to handle long videos by using a sliding-window approach. This means it can update its tracking in real-time as it processes the video, making it incredibly flexible and scalable.
