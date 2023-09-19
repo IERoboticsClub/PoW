@@ -64,3 +64,11 @@ graph TD
 
 
 The technical backbone of CoTracker is a transformer network, a type of neural network that's particularly good at handling sequences and relationships within them. The transformer iteratively refines its estimates of where points are in each frame, effectively learning from the video as it goes along. What's even cooler is that this isn't just for short clips; CoTracker is designed to handle long videos by using a sliding-window approach. This means it can update its tracking in real-time as it processes the video, making it incredibly flexible and scalable.
+
+## Combination with Viper
+
+CoTracker could serve as one of the modules in ViperGPT's API. For example, a query like "Track the movement of the red car and the blue car and tell me when they are closest" could be answered by combining CoTracker's tracking capabilities with ViperGPT's code generation and reasoning.
+
+> track the movement of the dog and the ball in the video and tell me if the dog catches the ball.
+
+> Track the movement of all individuals in the surveillance video and alert if someone enters a restricted area.
