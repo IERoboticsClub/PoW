@@ -15,6 +15,7 @@ Traditionally, there are two main ways to predict motion in videos:
 Both methods have their limitations. For example, they struggle with tracking points that get temporarily hidden (occluded) or are part of the same object.
 
 ## High Level Overview
+
 We first need to understand the inputs that go into the model. We have a video and a set of tracks for each particle. The tracks are initialized as null. The model then takes these tracks and updates them to better fit the ground truth. Lets look at the variables to better understand the problem:
 
 
@@ -56,7 +57,7 @@ graph TD
 - **Iterative Refinement**: $O_{ti}$
   The updated tracks are expressed by a corresponding grid of output tokens $O_{ti}$.
 
-- **Final Tracks**: 
+- **Final Tracks**:
   The final estimated positions of the points being tracked.
 
 - **Output: Estimated Tracks**: $\hat{P}_{t}$
