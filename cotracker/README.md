@@ -21,13 +21,12 @@ Both methods have their limitations. For example, they struggle with tracking po
 
 ## High Level Overview
 
-CoTracker is built on the idea that points in a video are often correlated. For example, if you're tracking the wheels of a car, it's likely that if one wheel moves, the other will too. The authors argue that by ignoring these correlations, we're missing out on improving the accuracy of tracking. So, they propose a new architecture that tracks multiple points jointly throughout an entire video sequence. This is a game-changer because it allows the model to share information between points, enhancing the tracking performance.
+CoTracker is built on the idea that points in a video are often correlated. For example, if you're tracking the wheels of a car, it's likely that if one wheel moves, the other will too. The authors argue that by ignoring these correlations, we're missing out on improving the accuracy of tracking. So, they propose a new architecture that tracks multiple points jointly throughout an entire video sequence. This is a game-changer because it allows the model be more informed of the correlations between points that are being tracked.
 
 ```mermaid
 graph TD
     A[Initial Tracks] --> B[Load into 2D Grid]
-    B --> C[Transformer Network]
-    C --> D[Apply Specialized Attention]
+    B --> D[Transformer Network]
     D --> E[Iterative Refinement]
     E -. "Update Grid M times" .-> B
     E --> F[Final Tracks]
@@ -39,22 +38,19 @@ graph TD
 ### Legend for CoTracker Architecture Diagram (chart above)
 
 - **Initial Tracks**: $(P_{ti}, t_i)^{N}_{i=1}$
-  The starting locations and times of $N$ tracks.
+  The starting locations and times of $N$ tracks. A track is essentially the temporal progression of the point throughout the entire video.
 
 - **Load into 2D Grid**: $G_{it}$
-  The grid of input tokens, one for each track $i = 1, ..., N$, and time $t = 1, ..., T$.
+  The grid of input tokens, one for each track $i = 1, ..., N$, and time $t = 1, ..., T$. You can think of a token as a small packet of information that describes a point you're tracking in a video. This packet contains various details like where the point is located on the screen, whether it's visible or hidden, what it looks like, and how it relates to its initial position.
 
 - **Transformer Network**: $\Psi: G \rightarrow O$
   The transformer network that processes the 2D grid $G$ to improve a given estimate of the tracks.
-
-- **Apply Specialized Attention**: Self-Attention in $\Psi$
-  The specialized attention layers within the transformer that focus on important aspects of the motion.
 
 - **Iterative Refinement**: $O_{ti}$
   The updated tracks are expressed by a corresponding grid of output tokens $O_{ti}$.
 
 - **Final Tracks**:
-  The final estimated positions of the points being tracked.
+  The final estimated positions of the points being tracked. Give me a multi-dimensional tensor, which for each frame contains the $x,y$ position of each POI.
 
 - **Output: Estimated Tracks**: $\hat{P}_{t}$
   The final estimated positions of the points being tracked.
@@ -63,7 +59,7 @@ graph TD
   The estimated visibility flags indicate whether each point is visible or occluded in each frame.
 
 
-The technical backbone of CoTracker is a transformer network, a type of neural network that's particularly good at handling sequences and relationships within them. The transformer iteratively refines its estimates of where points are in each frame, effectively learning from the video as it goes along. What's even cooler is that this isn't just for short clips; CoTracker is designed to handle long videos by using a sliding-window approach. This means it can update its tracking in real-time as it processes the video, making it incredibly flexible and scalable.
+The technical backbone of CoTracker is a (transformer network)[https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/], a type of neural network that's particularly good at handling sequences and relationships within them. The transformer iteratively refines its estimates of where points are in each frame, effectively learning from the video as it goes along. What's even cooler is that this isn't just for short clips; CoTracker is designed to handle long videos by using a sliding-window approach. This means it can update its tracking in real-time as it processes the video, making it incredibly flexible and scalable.
 
 ## Combination with Viper
 
