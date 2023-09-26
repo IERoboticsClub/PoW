@@ -1,5 +1,4 @@
 TOPIC ?= gans
-TOPIC ?= cotracker
 
 install:
 	@echo "Installing to local directory..."

@@ -5,7 +5,11 @@ Demo: https://huggingface.co/spaces/facebook/cotracker
 ---
 # CoTracker
 
-A new state of the art architecture for optical flow and particle tracking proposed by meta. The key innovation in this project is the use of Transformer Architecture and the idea that tracking multiple particles concurrently, can help boos overall accuracy.
+A new state-of-the-art architecture for optical flow and particle tracking proposed by Meta. The research breaks new ground by incorporating two major advancements:
+
+1. Implementation of Transformer Architecture: By utilizing the Transformer model, the project aims to offer superior performance in sequence-based tasks, allowing for more effective data interpretation and pattern recognition.
+
+2. Concurrent Multi-Point Tracking: Traditional methods often track single data points sequentially, which can be limiting. This research proposes tracking multiple points simultaneously, thereby improving overall system accuracy and efficiency.
 
 https://github.com/velocitatem/PoW/assets/60182044/527a3377-4f59-435f-a0e1-b8b65a838b08
 
@@ -64,6 +68,7 @@ The technical backbone of CoTracker is a [transformer network](https://mchromiak
 ## Combination with Viper
 
 CoTracker could serve as one of the modules in ViperGPT's API. For example, a query like "Track the movement of the red car and the blue car and tell me when they are closest" could be answered by combining CoTracker's tracking capabilities with ViperGPT's code generation and reasoning.
+Example prompts:
 
 > track the movement of the dog and the ball in the video and tell me if the dog catches the ball.
 
