@@ -13,13 +13,13 @@ The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on 
 ✅ To ensure that everyone has access to the information presented during the event, we will **create slides and share them** via Notion. If you are unable to attend, you may access the slides from the **previous session and this week's paper** by accessing here: [Papers](https://www.notion.so/AI-PoW-Series-77071497fa224d2a897e77ec0f4b172a)
 
 ## Past Papers
-
-
  
 | Topic | Paper | Code | Visuals |
 | :---: | :---: | :---: | :---: |
 | GANS  | Generative Adversial Networks | [Code](./gans/) | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100"> |
+| OpticalFlow | CoTracker                     | [Code](./cotracker) | <img src="./cotracker/paragliding-launch.jpg" width="100" height="100" style="object-fit: cover;" /> |
 | AUTOENCODERS | Autoencoders | [Code](./autoencoders/) | <img src="./autoencoders/VAE_latent_pace_visualization.png" width="100" height="100"> |
+
 
 
 ## How to make this code run
@@ -41,7 +41,7 @@ source .venv/bin/activate
 
 ## How to Contribute
 
-Do you have code related to one of the papers, and it works? Then you can contribute to this repository. 
+Do you have code related to one of the papers, and it works? Then you can contribute to this repository.
 
 > Note!!! If you have code that works, make sure you commit a notebook showing the outputs of the code.
 
@@ -76,12 +76,3 @@ git push origin <your_branch_name>
 #### 6. Submit your changes for review
 
 If you go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button. Now submit the pull request.
-
-
-
-
-
-
-
-
-
