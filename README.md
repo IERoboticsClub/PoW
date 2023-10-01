@@ -19,6 +19,7 @@ The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on 
 | Topic | Paper | Code | Visuals |
 | :---: | :---: | :---: | :---: |
 | GANS  | Generative Adversial Networks | [Code](./gans/) | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100"> |
+| AUTOENCODERS | Autoencoders | [Code](./autoencoders/) | <img src="./autoencoders/VAE_latent_pace_visualization.png" width="100" height="100"> |
 
 
 ## How to make this code run
