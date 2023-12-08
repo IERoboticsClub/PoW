@@ -1,5 +1,5 @@
-# Papers of the Week
-
+# Papers of the Week 
+# -> Check the [Slides](https://docs.google.com/presentation/d/1ngzVRCZ0tqfwsE7GT4URLFPOYCmcRoE-WLwDRsC3mck/edit#slide=id.p) for all the PoWs!
 
 
 ## PoW Series
