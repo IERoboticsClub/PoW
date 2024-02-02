@@ -14,13 +14,12 @@ The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on 
 
 ## Past Papers
 
-
-
-| Topic       | Paper                                                      | Code                                            | Visuals                                                                                              |
-|:-----------:|:----------------------------------------------------------:|:-----------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
-| GANS        | Generative Adversial Networks                              | [Code](./gans/)                                 | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100">                         |
-| OpticalFlow | CoTracker                                                  | [Code](./cotracker)                             | <img src="./cotracker/paragliding-launch.jpg" width="100" height="100" style="object-fit: cover;" /> |
-| Whisper     | Robust Speech Recognition via Large-Scale Weak Supervision | [Code](https://github.com/IsmaPi/MUN-Assistant) |                                                                                                      |
+| Topic | Paper | Code | Visuals |
+| :---: | :---: | :---: | :---: |
+| GANS  | Generative Adversial Networks | [Code](./gans/) | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100"> |
+| OpticalFlow | CoTracker                     | [Code](./cotracker) | <img src="./cotracker/paragliding-launch.jpg" width="100" height="100" style="object-fit: cover;" /> |
+| AUTOENCODERS | Autoencoders | [Code](./autoencoders/) | <img src="./autoencoders/VAE_latent_pace_visualization.png" width="100" height="100"> |
+| Whisper     | Robust Speech Recognition via Large-Scale Weak Supervision | [Code](https://github.com/IsmaPi/MUN-Assistant) | <img src="https://images.openai.com/blob/13c810cb-0592-442d-9580-714838b8ed28/whisper.jpg?trim=519,129,519,119&width=3200" width="100" height="100"> |                                                                                          |
 
 
 ## How to make this code run
