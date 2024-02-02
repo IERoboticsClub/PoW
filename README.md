@@ -16,10 +16,11 @@ The IE Robotics & AI Club organizes the AI Paper of the Week, a **discussion on 
 
 
 
-| Topic       | Paper                         | Code                | Visuals                                                                                              |
-|:-----------:|:-----------------------------:|:-------------------:|:----------------------------------------------------------------------------------------------------:|
-| GANS        | Generative Adversial Networks | [Code](./gans/)     | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100">                         |
-| OpticalFlow | CoTracker                     | [Code](./cotracker) | <img src="./cotracker/paragliding-launch.jpg" width="100" height="100" style="object-fit: cover;" /> |
+| Topic       | Paper                                                      | Code                                            | Visuals                                                                                              |
+|:-----------:|:----------------------------------------------------------:|:-----------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+| GANS        | Generative Adversial Networks                              | [Code](./gans/)                                 | <img src="./gans/mnist_gan_training_evolution.gif" width="100" height="100">                         |
+| OpticalFlow | CoTracker                                                  | [Code](./cotracker)                             | <img src="./cotracker/paragliding-launch.jpg" width="100" height="100" style="object-fit: cover;" /> |
+| Whisper     | Robust Speech Recognition via Large-Scale Weak Supervision | [Code](https://github.com/IsmaPi/MUN-Assistant) |                                                                                                      |
 
 
 ## How to make this code run
